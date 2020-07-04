@@ -9,6 +9,7 @@ monthly_payment = int(input())
 
 def credit_calculator(principal, calc, month):
     if calc == 'm':
-        return principal / month
+        return round(principal / monthly_payment)
     if calc == 'p':
-        return principal /
+        return round(principal / month)
+    print('It takes ')
