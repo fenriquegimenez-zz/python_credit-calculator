@@ -1,15 +1,7 @@
-print('Enter the credit principal:')
-credit_principal = int(input())
-print('What do you want to calculate?')
-print('type "m" - for count of months \ntype "p" - for monthly payment:')
-type_of_calculation = input()
-print('Enter the count of months:')
-monthly_payment = int(input())
-
-
-def credit_calculator(principal, calc, month):
-    if calc == 'm':
-        return round(principal / monthly_payment)
-    if calc == 'p':
-        return round(principal / month)
-    print('It takes ')
+print('Ingrese el monto que desea solicitar:')
+monto_prestamo = int(input())
+print('Qué quiere calcular?')
+print('Escriba "m" - para conteo de meses \nEscriba "p" - para cuota mensual:')
+tipo_de_calculo = input()
+print('Ingrese la cantidad de meses deseada:')
+duracion_deseada = int(input())
