@@ -6,7 +6,6 @@ print('type "n" - for count of months,')
 print('type "a" - for annuity monthly payment,')
 print('type "p" - for credit principal:')
 calc_choice = input()
-natural_year  = 0.0833334
 
 if calc_choice == 'n':
     print('Enter the credit principal:')
@@ -28,7 +27,7 @@ if calc_choice == 'n':
             elif months < 1:
                 print('You need a year to repay this credit!')
             else:
-                print('You need a year and {monts} month to repay this credit!')
+                print('You need a year and {months} month to repay this credit!')
         elif years < 1:
             print(f'You need {months} months to repay this credit!')
     else:
@@ -41,7 +40,8 @@ elif calc_choice == 'a':
     print('Enter credit interest:')
     credit_interest = int(input())
     nominal_interest_rate = (credit_interest / (12 * 100))
-    annuity_payment = int(math.ceil(credit_principal * ((nominal_interest_rate * (1 + nominal_interest_rate) ** periods_count) 
+    annuity_payment = int(math.ceil(credit_principal * ((nominal_interest_rate 
+    * (1 + nominal_interest_rate) ** periods_count) 
     / (((1 + nominal_interest_rate) ** periods_count) - 1))))
     print(f'Your annuity payment = {annuity_payment}!')    
 elif calc_choice == 'p':
@@ -51,6 +51,9 @@ elif calc_choice == 'p':
     periods_count = float(input())
     print('Enter credit interest:')
     credit_interest = float(input())
+    principal_output = (annuity_payment / ((nominal_interest_rate * 
+    (1 + nominal_interest_rate) ** periods_count) / (((1 + nominal_interest_rate) 
+    ** periods_count) - 1)))
     print(f'Your credit principal = {principal_output}!')    
 else:
     print('Enter a valid choice!')
