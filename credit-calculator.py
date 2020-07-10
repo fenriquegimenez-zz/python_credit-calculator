@@ -51,9 +51,10 @@ elif calc_choice == 'p':
     periods_count = float(input())
     print('Enter credit interest:')
     credit_interest = float(input())
-    principal_output = (annuity_payment / ((nominal_interest_rate * 
+    nominal_interest_rate = (credit_interest / (12 * 100))
+    principal_output = (monthly_payment / ((nominal_interest_rate * 
     (1 + nominal_interest_rate) ** periods_count) / (((1 + nominal_interest_rate) 
     ** periods_count) - 1)))
-    print(f'Your credit principal = {principal_output}!')    
+    print(f'Your credit principal = {round(principal_output)}!')    
 else:
     print('Enter a valid choice!')
